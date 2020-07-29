@@ -1,0 +1,15 @@
+.height {
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+}
+.flex {
+    display: flex;
+}
+.justify-around {
+    justify-content: space-around;
+}
+body {
+    background-color: black;
+    color: white;
+}
