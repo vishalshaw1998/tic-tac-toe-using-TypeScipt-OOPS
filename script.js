@@ -242,6 +242,7 @@ var Box = /** @class */ (function () {
         if (flattedArray.indexOf("") == -1) {
             playerInfo.innerHTML = "Game Is Drawn";
             alert("Game Is Drawn");
+            return;
         }
     };
     Box.prototype.changevalue = function () {
