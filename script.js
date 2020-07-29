@@ -233,6 +233,10 @@ var Box = /** @class */ (function () {
             }
         }
         this.checkDraw();
+        if (gameDrawn == true) {
+            playerInfo.innerHTML = "Game Drawn";
+            return;
+        }
         this.changevalue();
     };
     Box.prototype.checkDraw = function () {
@@ -240,7 +244,7 @@ var Box = /** @class */ (function () {
             return __spreadArrays(acc, curr);
         }, []);
         if (flattedArray.indexOf("") == -1) {
-            playerInfo.innerHTML = "Game Is Drawn";
+            gameDrawn = true;
             alert("Game Is Drawn");
             return;
         }
@@ -340,7 +344,7 @@ container.appendChild(containerForButton);
 container.appendChild(playerInfo);
 document.body.appendChild(container);
 btn1.addEventListener("click", function () {
-    if (winnerFound) {
+    if (winnerFound || gameDrawn) {
         alert("Please Reset The Game");
         return;
     }

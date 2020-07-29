@@ -225,6 +225,10 @@ class Box {
             }
         }
         this.checkDraw();
+        if (gameDrawn == true) {
+            playerInfo.innerHTML = "Game Drawn";
+            return;
+        }
         this.changevalue();
     }
 
@@ -233,7 +237,7 @@ class Box {
             return [...acc, ...curr];
         }, []);
         if (flattedArray.indexOf("") == -1) {
-            playerInfo.innerHTML = "Game Is Drawn";
+            gameDrawn = true;
             alert("Game Is Drawn");
             return;
         }
@@ -366,7 +370,7 @@ container.appendChild(playerInfo);
 document.body.appendChild(container);
 
 btn1.addEventListener("click", () => {
-    if (winnerFound) {
+    if (winnerFound || gameDrawn) {
         alert("Please Reset The Game");
         return;
     }
