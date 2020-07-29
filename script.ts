@@ -235,6 +235,7 @@ class Box {
         if (flattedArray.indexOf("") == -1) {
             playerInfo.innerHTML = "Game Is Drawn";
             alert("Game Is Drawn");
+            return;
         }
     }
 
