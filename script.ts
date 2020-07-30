@@ -200,7 +200,7 @@ class Box {
         }
         if (+x + 1 == 2 && +y - 1 == 0) {
             let topLeft = arrayOfValues[+x - 1][+y - 1];
-            let topRight = arrayOfValues[+x + 1][+y + 1];
+            let topRight = arrayOfValues[+x - 1][+y + 1];
             let bottomLeft = arrayOfValues[+x + 1][+y - 1];
             let bottomRight = arrayOfValues[+x + 1][+y + 1];
             if (

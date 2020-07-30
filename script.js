@@ -1,3 +1,4 @@
+"use strict";
 var __spreadArrays = (this && this.__spreadArrays) || function () {
     for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
     for (var r = Array(s), k = 0, i = 0; i < il; i++)
@@ -212,7 +213,7 @@ var Box = /** @class */ (function () {
         }
         if (+x + 1 == 2 && +y - 1 == 0) {
             var topLeft = arrayOfValues[+x - 1][+y - 1];
-            var topRight = arrayOfValues[+x + 1][+y + 1];
+            var topRight = arrayOfValues[+x - 1][+y + 1];
             var bottomLeft = arrayOfValues[+x + 1][+y - 1];
             var bottomRight = arrayOfValues[+x + 1][+y + 1];
             if (topLeft == bottomRight &&
